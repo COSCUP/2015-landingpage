@@ -81,7 +81,7 @@
         }
 
         $.getJSON(
-          '//query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(settings.query  + ' and extras="url_' + settings.flickrSize + '"') + '&format=json&diagnostics=true&callback=?',
+          'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(settings.query  + ' and extras="url_' + settings.flickrSize + '"') + '&format=json&diagnostics=true&callback=?',
           function (data, status) {
             if (!data.query.results || !data.query.results.photo) {
               callback(false);
@@ -109,7 +109,7 @@
           width: photo['width_' + settings.flickrSize],
           height: photo['height_' + settings.flickrSize],
           photo_url: photo['url_' + settings.flickrSize],
-          link_url: 'http://www.flickr.com/photos/' + photo.owner + '/' + photo.id,
+          link_url: '//www.flickr.com/photos/' + photo.owner + '/' + photo.id,
           title: photo.title
         }
       }
