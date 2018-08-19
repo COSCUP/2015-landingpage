@@ -81,7 +81,7 @@
         }
 
         $.getJSON(
-          'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(settings.query  + ' and extras="url_' + settings.flickrSize + '"') + '&format=json&diagnostics=true&callback=?',
+          'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(settings.query  + ' and extras="url_' + settings.flickrSize + '"') + '&format=json&diagnostics=true&callback=?',
           function (data, status) {
             if (!data.query.results || !data.query.results.photo) {
               callback(false);
